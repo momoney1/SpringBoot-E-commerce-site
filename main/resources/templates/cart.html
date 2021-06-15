@@ -1,0 +1,184 @@
+
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HTML5 Local Storage Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="rating" content="General">
+    <meta name="expires" content="never">
+    <meta name="language" content="English, EN">
+    <meta name="description" content="Shopping cart project with HTML5 and JavaScript">
+    <meta name="keywords" content="HTML5,CSS,JavaScript, html5 session storage, html5 local storage">
+    <meta name="author" content="dcwebmakers.com">
+    <script src="Storage.js"></script>
+    <title>All Products</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="bootstrap-4.0.0/">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family-Poppins:wght@300;400;500;600;700;&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<!--C:\Users\moedi\OneDrive\Desktop\MyCode\bootstrap-4.0.0\assets\css-->
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" onclick="location.href='https://www.getfreestyled.com/'" id="navbar__logo">The Freestyle App&#8482</a>
+            <div class="navbar__toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+              <li class="navbar__item">
+                  <a href="/index.html#home" class="navbar__links" id="home-page"><i class="fa fa-home"></i></a>
+              </li>
+              <li class="navbar__item">
+                <a href="#about" class="navbar__links" onclick="location.href='https://www.getfreestyled.com/contact'" id="about-page"><i class="fas fa-question-circle"></i>
+
+</a>
+            </li>
+            <li class="navbar__item">
+                <a href="#about" class="navbar__links" onclick="location.href='#'" id="about-page"><i class="fab fa-product-hunt"></i>
+
+                </i>
+                </a>
+            </li>
+            <li class="navbar__item">
+                <a href="#services" class="navbar__links" onclick="location.href='https://www.getfreestyled.com/events'" id="services-page"><i class="fa fa-calendar" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="navbar__item">
+                <a href="#about" class="navbar__links" onclick="location.href='https://www.getfreestyled.com/blog'" id="about-page"><i class="fas fa-blog"></i>
+
+                </a>
+            </li>
+            <li class="navbar__btn">
+                <a href="#sign-up" class="button" onclick="location.href='https://www.getfreestyled.com/login'" id="signup">Sign In</a> 
+            </li>
+          </ul>
+       </div>
+    </nav>
+
+<!--car item details-->
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="/formalpic.png" alt="">
+                    <div>
+                    	<form method="post" th:action="@{/payPal}">
+                    		<p id="cocoa5000" th:name="product">Cocoa Butter 5000</p>
+                        	<small id="smallPrice" th:name="productCost">Price: $</small>
+                        	
+                    	</form>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td> <input type="number" value="1" id="quantity1" min="0" max="15"> </td>
+            <td id="price1">$50.00</td>
+        </tr>
+        <!--<tr>
+            <td>
+                <div class="cart-info">
+                    <img src="/formalpic.png" alt="">
+                    <div>
+                        <p>Cocoa Butter 5000</p>
+                        <small>Price: $50.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td> <input type="number" value="1"> </td>
+            <td id="price2">$50.00</td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="/formalpic.png" alt="">
+                    <div>
+                        <p>Cocoa Butter 5000</p>
+                        <small>Price: $50.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td> <input type="number" value="1"> </td>
+            <td id="price3">$50.00</td>
+
+        </tr> -->
+    </table>
+
+    <div class="total-price">
+    <form method="post" th:action="@{/payPal}">
+    <table>
+            <tr>
+                <td>Subtotal</td>
+                <td id="subTot" name="subtotal">$200.00</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td id="tax" name="taxValue">$35.00</td>
+
+            </tr>            <tr>
+                <td>Total</td>
+                <td id="tot" name="totalValue">$230.00</td>
+            </tr>
+        </table>
+                 <button type="submit" class="my__button">
+                 <a th:href="@{/payPal}" class="my__button-tag">Secure Checkout</a>
+                 </button>
+        
+    </form>
+        
+    </div>
+</div>
+
+    
+    <!--footer section-->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="/sign-up">Explore</a>
+                    <a href="/sign-up">Reviews</a>
+                    <a href="/sign-up">Calendar</a>
+                    <a href="/sign-up">Services</a>
+                    <a href="/sign-up">Profile</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="/sign-up">Facebook</a>
+                    <a href="/sign-up">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <section class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="footer__logo">2021 The Freestyle App&#8482</a>
+                </div>
+                <p class="website__rights">© 2021 The Freestyle App&#8482</p>
+                <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </section>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>
