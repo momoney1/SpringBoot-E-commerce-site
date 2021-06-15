@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="loginStyle.CSS">
+    <link rel="stylesheet" href="productStyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" onclick="location.href='https://www.getfreestyled.com/'" id="navbar__logo">The Freestyle App&#8482</a> <!--link to getfreestyled.com -->
+            
+            <div class="navbar__toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+              <li class="navbar__item">
+                  <a href="#" th:href="@{/index}" class="navbar__links" id="home-page"><i class="fa fa-home"></i></a> <!-- Link back to homepage -->
+                  
+              </li>
+              <li class="navbar__item">
+                <a href="#about" class="navbar__links" onclick="location.href='https://www.getfreestyled.com/contact'" id="about-page"><i class="fas fa-question-circle"></i></a>
+            </li>
+            <li class="navbar__item">
+                <a href="#" th:href="@{/Products}" class="navbar__links" id="about-page"><i class="fab fa-product-hunt"></i>
+                </a>
+            </li>
+            <li class="navbar__item">
+                <a href="#services" class="navbar__links" onclick="location.href='https://www.getfreestyled.com/events'" id="services-page"><i class="fa fa-calendar" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="navbar__item">
+                <a href="#about" class="navbar__links" onclick="location.href='https://www.getfreestyled.com/blog'" id="about-page"><i class="fas fa-blog"></i>
+
+                </a>
+            </li>
+            <li class="navbar__btn">
+                <a href="#sign-up" class="button" onclick="location.href='https://www.getfreestyled.com/login'" id="signup">Sign In</a> //link to sign up page
+            </li>
+          </ul>
+       </div>
+    </nav>
+
+    <!--Hero section-->
+    <div class="hero" id="home">
+        <div class="hero__container">
+            <h1 class="hero__heading">Come get <span>styled</span></h1>
+            <p class="hero__description">Unlimited Possibilities</p>
+            <button class="main__btn"><a href="#">Book Now!</a></button>
+        </div>
+    </div>
+
+    <!--About section-->
+    <div class="main" id="about">
+        <div class="main__container">
+            <div class="main__img--container">
+                <div class="main__img--card"><img class="image__image" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2288026/settings_images/P4OwuQVRhG1eNYXoOACQ_112.png" kjb-settings-id="sections_1575400143733_blocks_1594132230444_settings_image" alt=""></div>
+            </div>
+            <div class="main__content">
+                <h1>The Freestyle App</h1>
+                <h2>is your "Word of Mouth" App for Where to Go</h2>
+                <p>The FreeStyle App allows you to skip the time wasted searching through anonymous reviews and instead connects you with relevant photos, experiences and reviews shared by your trusted network - YOUR FRIENDS! Share your pictures, shout-out the hair and beauty professionals that you Trust, and allow your network an opportunity to connect with them</p>
+                <div class="main__apple"><a href="https://itunes.apple.com/us/app/the-freestyle-app/id1375582789?ls=1&amp;mt=8">
+                    <img class="image__image" src="https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/2288026/settings_images/7SddRXH5QafuTR7u1RLw_png-transparent-app-store-apple-iphone-apple-text-label-logo.png" alt="" width="355" height="60"></a>
+                </div>
+                <button class="main__btn but" onclick="location.href='https://itunes.apple.com/us/app/the-freestyle-app/id1375582789?ls=1&amp;mt=8'"><a href="#">Download the App</a></button>
+                
+            </div>
+            <div class="main__video" id="video1">
+                <p id="referrals">Hear Our Voices.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AijolwPcJgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="main__video" id="video2">
+                <p id="referrals2">Our Trusted Referrals.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qdbUxYTfoz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="main__video" id= "video3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iPp-SQqIsHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!--Services section-->
+    <div class="services" id="services">
+        <h1>Our Services</h1>
+        <div class="services__wrapper">
+            <div class="services__card">
+                <h2>Top Hair and Beauty Professionals</h2>
+                <p>Browse by category</p>
+                <div class="services__btn"><button>Get Started</button></div>
+            </div>
+            <div class="services__card">
+                <h2>Share Photos</h2>
+                <p>Show off your new look</p>
+                <div class="services__btn"><button>Get Started</button></div>
+            </div>
+            <div class="services__card">
+                <h2>Grow Your Business</h2>
+                <p>Be Your Own Boss</p>
+                <div class="services__btn"><button>Get Started</button></div>
+            </div>
+            <div class="services__card">
+                <h2>Invite Friends</h2>
+                <p>Word of Mouth</p>
+                <div class="services__btn"><button>Get Started</button></div>
+            </div>
+            
+        </div>
+    </div><!--featuer section-->
+    <div class="main" id="sign-up">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>We Want to Hear From You</h1>
+                <h2>Connect With Us!</h2>
+                <p class="main__content--sub">See what makes us different</p>
+                <button class="main__btn--sub"><a href="/emailStorage.html">Subscribe</a></button>
+            </div>
+            <div class="main__img--container">
+                <div class="main__img--card" id="card-2"><img class="image__image" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2288026/settings_images/wepbv1EDTT63PHU3T4Hk_4.png" kjb-settings-id="sections_1594188824107_blocks_1594201138838_settings_image" alt=""></div>                
+            </div>   
+        </div>
+    </div>
+    <!--footer section-->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="/sign-up">Explore</a>
+                    <a href="/sign-up">Reviews</a>
+                    <a href="/sign-up">Calendar</a>
+                    <a href="/sign-up">Services</a>
+                    <a href="/sign-up">Profile</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="/sign-up">Facebook</a>
+                    <a href="/sign-up">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <section class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="footer__logo">2021 The Freestyle App&#8482</a>
+                </div>
+                <p class="website__rights">© 2021 The Freestyle App&#8482</p>
+                <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </section>
+    </div>
+    <script src="site.js"></script>
+</body>
+</html>
